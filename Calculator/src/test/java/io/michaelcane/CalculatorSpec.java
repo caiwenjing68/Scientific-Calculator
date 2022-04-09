@@ -215,32 +215,14 @@ public class CalculatorSpec {
         assertEquals("This should evaluate to 1000000000", expectedValue, actualValue, delta);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @Test
+    public void test$cube() {
+        /**
+         * This method should take one values (double)
+         * return a number multiplied by itself twice
+         */
+        double expectedValue = 8;
+        double actualValue = calculator.cube(2);
+        assertEquals("This should evaluate to 8", expectedValue, actualValue, delta);
+    }
 }
