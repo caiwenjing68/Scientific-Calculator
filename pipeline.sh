@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+        cron('H/15 * * * *')
+    }
+
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "M3"
@@ -20,7 +24,7 @@ pipeline {
         stage('Static Analysis') {
             steps {
                 // static analysis using sonarQube
-                sh "mvn clean verify sonar:sonar -Dsonar.projectKey=17643hw3 -Dsonar.login=25f73db1a1354c8f7fd55894deb6fdf422b8ce5a"
+                sh "mvn -f /var/lib/jenkins/workspace/17643HW3/Calculator/pom.xml clean verify sonar:sonar -Dsonar.projectKey=17643hw3 -Dsonar.login=25f73db1a1354c8f7fd55894deb6fdf422b8ce5a"
             }
         }
         
