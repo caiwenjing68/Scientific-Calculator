@@ -154,14 +154,6 @@ public class Calculator {
         return Math.pow(10, value1);
     }
 
-    public static double cube(double value) {
-        /**
-         * This method should take one values (double)
-         * return a number multiplied by itself twice
-         */
-        return value*value*value;
-    }
-
     private void displayError() {
         /**
          * Checks if dividing by Zero
